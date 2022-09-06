@@ -12,6 +12,7 @@ import AdminDashboardPage from "./pages/Admin/AdminDashboard/AdminDashboard";
 import EmployeeDashboard from "./pages/Employee/EmployeeDashboard/EmployeeDashboard";
 import ProjectManagerDashboard from "./pages/ProjectManager/ProjectManagerDashboard/ProjectManageDashboard";
 import ProjectManagementDashboardPage from "./pages/ProjectManagement/ProjectManagementDashboard/ProjectManagementDashboard";
+import AddAtendance from "./pages/Employee/AddAttendance/AddAttendance";
 import "./text.css"
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
         <Route excat path="/employee/dashboard" element={<EmployeeDashboard />} />
         <Route excat path="/pm/dashboard" element={<ProjectManagerDashboard />} />
         <Route excat path="/management/dashboard" element={<ProjectManagementDashboardPage />} />
+
+
+        <Route excat path="/employee/addAttendance" element={<AddAtendance />} />
       </Routes>
     </Router>
 
