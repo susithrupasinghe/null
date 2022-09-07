@@ -1,3 +1,6 @@
+import {FaCircle} from 'react-icons/fa';
+import {AiFillSetting} from 'react-icons/ai';
+import {IoIosRemoveCircle} from 'react-icons/io';
 const Header = () => {
   return (
     <div
@@ -34,7 +37,7 @@ const Header = () => {
 
 const SprintCard = () => {
   return (
-    <div class="card">
+    <div class="card" style={{borderRadius: "10px"}}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div class="card-body">
           <h3 style={{ fontWeight: "bold" }}>Sprint 2</h3>
@@ -59,27 +62,48 @@ const SprintCard = () => {
           </button>
         </div>
       </div>
-      <div>
+      <div style={{padding: "0 2rem"}}>
       <table class="table">
   
   <tbody>
     <tr>
-      <th scope="row"></th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><FaCircle style={{color: "red"}}/></th>
+      <td>Task1</td>
+      <td>Worker1</td>
+      <td>3 days</td>
+      <td>5 points</td>
+      <td>
+        <div>
+            <AiFillSetting size={25} style={{color: "#A80038", marginRight: "20px"}} />
+            <IoIosRemoveCircle size={25} style={{color: "#A80038"}}/>
+        </div>
+      </td>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <th scope="row"><FaCircle style={{color: "red"}}/></th>
+      <td>Task1</td>
+      <td>Worker1</td>
+      <td>3 days</td>
+      <td>5 points</td>
+      <td>
+        <div>
+            <AiFillSetting size={25} style={{color: "#A80038", marginRight: "20px"}} />
+            <IoIosRemoveCircle size={25} style={{color: "#A80038"}}/>
+        </div>
+      </td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <th scope="row"><FaCircle style={{color: "red"}}/></th>
+      <td>Task1</td>
+      <td>Worker1</td>
+      <td>3 days</td>
+      <td>5 points</td>
+      <td>
+        <div>
+            <AiFillSetting size={25} style={{color: "#A80038", marginRight: "20px"}} />
+            <IoIosRemoveCircle size={25} style={{color: "#A80038"}}/>
+        </div>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -99,6 +123,9 @@ const Sprint = () => {
             <Header />
           </div>
           <div className="col-lg-12" style={{ marginTop: "2rem" }}>
+            <SprintCard />
+          </div>
+          <div className="col-lg-12" style={{ marginTop: "1.5rem" }}>
             <SprintCard />
           </div>
         </div>
