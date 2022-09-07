@@ -14,6 +14,12 @@ import ProjectManagerDashboard from "./pages/ProjectManager/ProjectManagerDashbo
 import ProjectManagementDashboardPage from "./pages/ProjectManagement/ProjectManagementDashboard/ProjectManagementDashboard";
 import AddAtendance from "./pages/Employee/AddAttendance/AddAttendance";
 import "./text.css"
+import ProjectDashboardPage from "./pages/ProjectManager/ProjectDashboard/ProjectDashboard";
+import ProjectManagement from "./pages/ProjectManager/ProjectManagement/ProjectManagement";
+import AdminProjectManagement from "./pages/Admin/ProjectManagement/AdminProjectManagement";
+import AddEmployee from "./pages/Employee/AddEmployee/AddEmployee";
+import EditProfile from "./pages/Employee/EditProfile/EditProfile";
+import Sprint from "./pages/ProjectManager/Sprint/Sprint";
 
 function App() {
   return (
@@ -27,10 +33,15 @@ function App() {
 
 
         <Route excat path="/admin/dashboard" element={<AdminDashboardPage />} />
+        <Route excat path="/admin/projectmanagement" element={<AdminProjectManagement />} />
         <Route excat path="/employee/dashboard" element={<EmployeeDashboard />} />
+        <Route excat path="/employee/add" element={<AddEmployee />} />
+        <Route excat path="/editprofile/:id" element={<EditProfile />} />
         <Route excat path="/pm/dashboard" element={<ProjectManagerDashboard />} />
+        <Route exact path="/pm/projectdashboard" element={<ProjectDashboardPage/>} />
+        <Route excat path="/pm/projectmanagement" element={<ProjectManagement />} />
         <Route excat path="/management/dashboard" element={<ProjectManagementDashboardPage />} />
-
+        <Route excat path="/:name/sprint" element={< Sprint/>} />
 
         <Route excat path="/employee/addAttendance" element={<AddAtendance />} />
       </Routes>
