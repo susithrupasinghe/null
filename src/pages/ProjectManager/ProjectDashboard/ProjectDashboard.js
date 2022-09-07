@@ -3,11 +3,13 @@ import {Link} from "react-router-dom";
 import profileEdit from '../../../assets/ProjectManagerDashboard/editProfile.svg';
 import projectDetails from '../../../assets/ProjectManagerDashboard/projectDetails.svg';
 import markAttendance from '../../../assets/ProjectManagerDashboard/markAttendance.svg';
-
+import recruit from "../../../assets/ProjectManagementDashboard/recruit.svg";
+import sprint from "../../../assets/ProjectManagementDashboard/sprintManagement.svg";
+import evaluate from "../../../assets/ProjectManagementDashboard/evaluateProject.svg";
 const Header = () => {
     return (
         <div className="text-center mt-5" style={{fontSize: "20px", color: "black", float: "right" }}>
-            <span className="display-6" style={{fontWeight: "bold"}}>Welcome Diluni</span>
+            <span className="display-6" style={{fontWeight: "bold"}}>Time table management system</span>
         </div>
     )
 }
@@ -21,7 +23,7 @@ const CardSection = () => {
                     <Link to="/addemployee">
                         <div className="card employeeDashboardCard boderRadiusCards" style={{ height : "18rem" }}>
                             <div className="card-body employeeDashboardCardOne" style={{
-                                 backgroundImage: `url(${profileEdit})`, backgroundSize: "cover", 
+                                 backgroundImage: `url(${recruit})`, backgroundSize: "cover", 
                                  backgroundRepeat: 'no-repeat', backgroundOrigin: 'content-box' 
                                  }}>
                          
@@ -33,7 +35,7 @@ const CardSection = () => {
                     <Link to="/pmlist">
                         <div className="card employeeDashboardCard boderRadiusCards" style={{ height : "18rem" }}>
                             <div className="card-body employeeDashboardCardOne" style={{
-                                 backgroundImage: `url(${projectDetails})`, backgroundSize: "cover", 
+                                 backgroundImage: `url(${sprint})`, backgroundSize: "cover", 
                                  backgroundRepeat: 'no-repeat', backgroundOrigin: 'content-box' 
                                  }}>
                             </div>
@@ -44,7 +46,7 @@ const CardSection = () => {
                     <Link to="/adminprojectsdashboard">
                         <div className="card employeeDashboardCard boderRadiusCards" style={{ height : "18rem" }}>
                             <div className="card-body employeeDashboardCardTwo" style={{
-                                 backgroundImage: `url(${markAttendance})`, backgroundSize: "cover", 
+                                 backgroundImage: `url(${evaluate})`, backgroundSize: "cover", 
                                  backgroundRepeat: 'no-repeat', backgroundOrigin: 'content-box' 
                                  }}>
                             </div>
@@ -56,7 +58,7 @@ const CardSection = () => {
     )
 }
 
-const AdminDashboardPage = () => {
+const ProjectDashboardPage = () => {
     return(
         <div>
             <div className="container">
@@ -69,4 +71,4 @@ const AdminDashboardPage = () => {
     )
 }
 
-export default AdminDashboardPage;
+export default ProjectDashboardPage;
