@@ -1,8 +1,19 @@
 import {FaCircle} from 'react-icons/fa';
-import {AiFillSetting} from 'react-icons/ai';
+import {AiFillEdit, AiFillSetting} from 'react-icons/ai';
 import {IoIosRemoveCircle} from 'react-icons/io';
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import { MdDelete } from 'react-icons/md';
+import { useState } from 'react';
 const Header = () => {
+    
+    const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
+
+  
+    
   return (
+    
     <div
       className="text-center mt-5"
       style={{
@@ -12,6 +23,20 @@ const Header = () => {
         justifyContent: "space-between",
       }}
     >
+        <Modal isOpen={modal} toggle={toggle}>
+        <ModalHeader toggle={toggle}>Create Sprint</ModalHeader>
+        <ModalBody>
+         <span>Sprint 3</span>
+         <br/>
+         <span>From</span>
+        </ModalBody>
+        <ModalFooter>
+          <Button class="btn btn-dark" onClick={toggle}>
+            Add
+          </Button>{' '}
+          
+        </ModalFooter>
+      </Modal>
       <span className="display-6" style={{ fontWeight: "bold" }}>
         Sprint
       </span>
@@ -27,6 +52,7 @@ const Header = () => {
           type="button"
           class="btn btn-dark"
           style={{ padding: "8px 25px", marginLeft: "1.5rem" }}
+          onClick={toggle}
         >
           Create
         </button>
@@ -35,9 +61,30 @@ const Header = () => {
   );
 };
 
+
+  
+
 const SprintCard = () => {
+    const [modal, setModal] = useState(false);
+
+    const toggle = () => setModal(!modal);
   return (
     <div class="card" style={{borderRadius: "10px"}}>
+        <Modal isOpen={modal} toggle={toggle}>
+        <ModalHeader toggle={toggle}>Add Feedback</ModalHeader>
+        <ModalBody>
+         <form>
+            <label>Add Feedback</label>
+            <textarea class="form-control" rows="3"></textarea>
+         </form>
+        </ModalBody>
+        <ModalFooter>
+          <Button class="btn btn-dark" onClick={toggle}>
+            Add
+          </Button>{' '}
+          
+        </ModalFooter>
+      </Modal>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div class="card-body">
           <h3 style={{ fontWeight: "bold" }}>Sprint 2</h3>
@@ -50,6 +97,7 @@ const SprintCard = () => {
             type="button"
             class="btn btn-dark"
             style={{ padding: "8px 25px" }}
+            onClick={toggle}
           >
             Add Feedback
           </button>
